@@ -16,7 +16,7 @@ public class FirstController {
 	private GetIpService getIpService;
 	
 	@ResponseBody
-	@RequestMapping("/index111")
+	@RequestMapping("/index//")
 	public String sd(HttpServletRequest request) {
 		String ip=getIpService.get(request);
 		//ModelAndView mView=new ModelAndView("index");	
