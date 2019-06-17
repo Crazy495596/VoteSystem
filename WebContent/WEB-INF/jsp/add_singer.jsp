@@ -8,14 +8,14 @@
 <script src="./js/jquery-3.4.1.min.js" ></script>
 <script>
 function add_singer() {
+	url="${pageContext.request.contextPath}/add_singer_submit"
     param=$("#form1").serialize();
-    $.ajax({
-        url:"${pageContext.request.contextPath}/add_singer_submit",
-        data:param,
-        success: function(data) {
-            alert(data);
+    $.post(url,param,function (date) {
+        alert(date.content);
+        if(date.flag==1){
+            location.href="${pageContext.request.contextPath}/employee/list";
         }
-        });
+    })
 }
 </script>
 </head>
