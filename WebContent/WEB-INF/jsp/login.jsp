@@ -46,7 +46,7 @@
               form.on('submit(login)', function(data){
                 // alert(888)
                 layer.msg(JSON.stringify(data.field),function(){
-                    location.href='index.jsp'
+                    location.href='index'
                 });
                 return false;
               });
